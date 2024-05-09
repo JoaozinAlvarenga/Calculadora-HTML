@@ -1,71 +1,85 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
-
-body{
-    height: 100vh;
-    background: linear-gradient(to bottom, #f9544c 50%, #090c31 50%);
-}
-
-.calculator{
+    border-radius: 15px;
+  }
+  
+  body {
+    background-color: rgb(133, 59, 59);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3em;
+  }
+  
+  #calc {
     width: 400px;
-    background-color: #15173c;
-    padding: 50 30px;
-    position: absolute;
-    transform: translate(-50%, -50%);
-    top: 50%;
-    left: 50%;
-    border-radius: 8px;
-    box-shadow: 0 20px 50px rgba(0, 5, 24, 0.40);
-}
-
-.display{
-    width: 100%;
-}
-
-.display input{
-    width: 100%;
-    padding: 15px 10px;
+    padding: 0.5em;
+    background-color: #c4c4c4;
+    color: #000;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  #calc h3 {
+    font-size: 0.8em;
+    font-weight: 300;
+    color: #666;
+  }
+  
+  #operations {
     text-align: right;
-    border: none;
-    background-color: transparent;
-    color: white;
-    font-size: 35px;
-}
-
-.display input::placeholder{
-    color: #EECCFF;
-}
-
-.buttons{
+  }
+  
+  #previous-operation {
+    color: #777;
+    padding: 0.2em;
+    overflow-wrap: break-word;
+    min-height: 1.6em;
+  }
+  
+  #current-operation {
+    min-height: 1.6em;
+    font-size: 3em;
+    font-weight: 700;
+    padding: 0.2em;
+    overflow-wrap: break-word;
+  }
+  
+  #buttons-container {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 20px;
-    margin-top: 40px;
-}
-
-.buttons input[type="button"]{
-    font-size: 20px;
-    padding: 17px;
-    border: none;
-    background-color: transparent;
-    color: white;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 3px;
+  }
+  
+  #buttons-container button {
+    border: 1px solid transparent;
+    border-radius: 0;
+    height: 4em;
+    font-size: 1.2em;
+    background-color: #dbdbdb;
     cursor: pointer;
-    border-radius: 5px;
-}
-
-.buttons input[type="button"]:hover{
-    box-shadow: 0 8px 25px #000d2e;
-}
-
-input[type="button"]#equal{
-    grid-row: span 2;
-    background-color: #f9544c;
-}
-
-input[type="button"][value="0"]{
+    border-radius: 7px;
+  }
+  
+  #buttons-container .number {
+    background-color: #f3f3f3;
+  }
+  
+  #buttons-container button:hover {
+    background-color: #c0c0c0;
+    border-color: rgb(187, 187, 187);
+    transition: .25s;
+  }
+  
+  #buttons-container #equal-btn {
     grid-column: span 2;
-}
+    background-color: #913737;
+  }
+  
+  #buttons-container #equal-btn:hover {
+    grid-column: span 2;
+    background-color: #813333;
+  }
